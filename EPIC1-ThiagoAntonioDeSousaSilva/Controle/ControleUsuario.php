@@ -46,7 +46,7 @@ switch ($acao) {
     case "loginUsuario":
         $usuario = $classUsuarioDAO->login($novoUsuario);
 
-        if ($usuario && $usuario['senha'] === $senha) { 
+        if ($usuario && $usuario['senha'] === $senha) {
             $_SESSION['usuario'] = $usuario['nome'];
             echo "<script>
                     alert('Login realizado com sucesso!');
@@ -58,29 +58,6 @@ switch ($acao) {
                     window.location.href = '../Visao/FormLogUsuario.php';
                   </script>";
         }
-        break;
-
-    case 'alterarUsuario':
-        $usuario = $classUsuarioDAO->alterarUsuario($novoUsuario);
-        if ($usuario == 1) {
-            header('Location:../index.php?&MSG= Cadastro atualizado com sucesso!');
-        } else {
-            header('Location:../index.php?&MSG= Não foi possivel realizar a atualização!');
-        }
-        break;
-
-    case "excluirUsuario":
-        if (isset($_GET['idex'])) {
-            $idUsuario = $_GET['idex'];
-            $classUsuarioDAO = new ClassUsuarioDAO();
-            $us = $classUsuarioDAO->excluirUsuarios($idUsuario);
-            if ($us == TRUE) {
-                header('Location:../index.php?PAGINA=listarUsuario&MSG= Usuario foi excluido com sucesso!');
-            } else {
-                header('Location:../index.php?PAGINA=listarUsuario&MSG=Não foi possivel realizar a exclusão do Usurio!');
-            }
-        }
-
         break;
     default:
         break;

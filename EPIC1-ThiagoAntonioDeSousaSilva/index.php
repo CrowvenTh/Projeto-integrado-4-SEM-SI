@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corvus_tech</title>
-    <link rel="stylesheet" href="../Prototipo-ThiagoAntonioDeSousaSilva/Visao/css/cad.css">
+    <link rel="stylesheet" href="../EPIC1-ThiagoAntonioDeSousaSilva/Visao/css/cad.css">
     <link rel="icon" type="image/x-icon" href="Visao/imagens/Corvus.tech_logo.png">
 </head>
 
@@ -22,7 +22,6 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <!-- <li><a href="Visao/ListarUsuario.php">Cadastros</a></li> -->
             <li><a href="Visao/FormLogUsuario.php">Login</a></li>
             <li><a href="Visao/FormCadUsuario.php">Cadastre-se</a></li>
         </ul>
