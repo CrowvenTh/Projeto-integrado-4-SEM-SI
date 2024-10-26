@@ -1,3 +1,5 @@
+<!-- teste de funcionalidade, não faz parte do EPIC1 -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,8 +14,8 @@
         </div>
 		
         <?php
-            require '../Modelo/ClassUsuario.php';
-            require '../Modelo/DAO/ClassUsuarioDAO.php';
+            require '../Prototipo-ThiagoAntonioDeSousaSilva/ClassUsuario.php';
+            require '../Prototipo-ThiagoAntonioDeSousaSilva/DAO/ClassUsuarioDAO.php';
 			$id =@$_GET['idex'];
             $novoUsuario = new ClassUsuario();
             $usuarioDAO = new ClassUsuarioDAO();

@@ -4,25 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se!</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../Visao/css/cad.css">
-    <link rel="icon" type="image/x-icon" href="Visao/imagens/Corvus.tech_logo.png">
+    <link rel="icon" type="image/x-icon" href="../Visao/imagens/Corvus.tech_logo.png">
 </head>
 
 <body>
     <nav>
         <ul>
             <li><a href="../index.php">Home</a></li>
-            <li><a href="../modelo/Visao/ListarUsuario.php">Cadastros</a></li>
-            <li><a href="../modelo/Visao/FormLogUsuario.php">Login</a></li>
+            <li><a href="../Visao/FormCadUsuario.php">Cadastre-se</a></li>
         </ul>
     </nav>
 
     <main>
-        <form method="post" action="../Controle/ControleUsuario.php?ACAO=cadastrarUsuario">
-            <h2>Formulário de Cadastro de Alunos</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" maxlength="40" placeholder="Digite seu nome" required />
+        <form method="post" action="../Controle/ControleUsuario.php?ACAO=loginUsuario">
+            <h2>Faça Login!</h2>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" maxlength="40" placeholder="Digite seu email" required />
@@ -30,21 +27,18 @@
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" maxlength="16" placeholder="Digite sua senha" required />
 
-            <label for="confirmarSenha">Confirmar Senha:</label>
-            <input type="password" id="confirmarSenha" name="confirmarSenha" maxlength="16" placeholder="Confirme sua senha" required />
-
-            <button type="submit">Registrar</button>
+            <button type="submit">Entrar</button>
             <button type="reset">Limpar</button>
-
         </form>
     </main>
 
+   
     <footer>
         <div class="footer-content">
             <ul>
                 <h3>Contato</h3>
                 <li>(61) 91234-5678</li>
-                <li><a style="color: white;" href="mailto:corvustech@gmail.com">corvustech@gmail.com</a></li>
+                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
             </ul>
             <ul>
                 <h3>Endereço</h3>
@@ -54,13 +48,14 @@
             </ul>
             <ul>
                 <h3>Redes Sociais</h3>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">WhatsApp</a></li>
-                <li><a href="#">Github</a></li>
+                <li> <a href="#">WhatsApp</a></li>
+                <li> <a href="#">Insagram</a></li>
+                <li> <a href="https://github.com/CrowvenTh">Github</a></li>
             </ul>
         </div>
     </footer>
 
 </body>
+
 
 </html>

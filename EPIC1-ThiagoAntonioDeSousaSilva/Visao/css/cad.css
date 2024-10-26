@@ -46,12 +46,80 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
+/* main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
+
+.table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #030b2a;
+}
+
+.table th {
+    background-color: #030b2a;
+    color: #f4f4f4;
+    font-weight: bold;
+}
+
+.table td {
+    color: #333;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e67e22;
+}
+
 
 form {
     background-color: white;
@@ -101,6 +169,16 @@ button[type="submit"]:hover {
     background-color: #171b2e;
 }
 
+button[type="reset"] {
+    background-color: #f4f4f4;
+    color: #030b2a;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 footer {
     background-color: #030b2a;
     color: white;
@@ -136,4 +214,9 @@ footer p {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: #f4f4f4;
+    cursor: pointer;
 }

@@ -1,3 +1,5 @@
+<!-- teste de funcionalidade, não faz parte do EPIC1 -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -59,12 +61,13 @@
         ?>
     </main>
 
+    
     <footer>
         <div class="footer-content">
             <ul>
                 <h3>Contato</h3>
                 <li>(61) 91234-5678</li>
-                <li><a style="color: white;" href="mailto:corvustech@gmail.com">corvustech@gmail.com</a></li>
+                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
             </ul>
             <ul>
                 <h3>Endereço</h3>
@@ -74,12 +77,14 @@
             </ul>
             <ul>
                 <h3>Redes Sociais</h3>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">WhatsApp</a></li>
-                <li><a href="#">Github</a></li>
+                <li> <a href="#">WhatsApp</a></li>
+                <li> <a href="#">Insagram</a></li>
+                <li> <a href="https://github.com/CrowvenTh">Github</a></li>
             </ul>
         </div>
     </footer>
+
 </body>
+
 
 </html>

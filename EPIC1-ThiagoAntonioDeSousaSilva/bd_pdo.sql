@@ -10,4 +10,4 @@ create table usuario(
     senha varchar(16)
 );
 
--- select * from usuario;
+select * from usuario;
