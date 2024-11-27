@@ -25,7 +25,6 @@ class ClassUsuario
         return $this->senha;
     }
 
-
     function setIdUsuario($idUsuario)
     {
         $this->idUsuario = $idUsuario;

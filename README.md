@@ -9,6 +9,6 @@ O tema escolhido foi um e-commerce relacionado a artigos de informática como co
 
 ### 👾 Logotipo
 <img 
-    style="width: 250px; border-radius: 250px;" src="../Projeto-integrado-4-SEM-SI/EPIC1-ThiagoAntonioDeSousaSilva/view/imagens/Corvus.tech_logo.png">
+    style="width: 250px; border-radius: 250px;" src="../Projeto-integrado-4-SEM-SI/EPIC1-ThiagoAntonioDeSousaSilva/Visao/imagens/Corvus.tech_logo.png">
 
 A logotipo inspirada no nome cuja intenção era de representar um corvo, foi pensada em demonstrar um estilo mais "agressivo" onde em sua origem foi criada com inspiração em alguns times de jogos virtuais onde os mascotes podem ser animais porém com um visual mais agressivo ou com uma "personalidade forte".
