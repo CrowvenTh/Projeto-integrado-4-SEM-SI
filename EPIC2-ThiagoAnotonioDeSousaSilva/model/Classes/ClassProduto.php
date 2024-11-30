@@ -1,6 +1,6 @@
 <?php
 
-class ClassEstoque
+class ClassProduto
 {
     private $idproduto;
     private $imagem;
@@ -40,7 +40,6 @@ class ClassEstoque
     {
         $this->idproduto = $idproduto;
     }
-
 
     public function setImagem($imagem)
     {

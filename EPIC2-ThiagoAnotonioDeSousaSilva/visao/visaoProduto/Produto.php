@@ -2,11 +2,12 @@
 session_start();
 // include("CadProduto.php");
 
-require '../../model/ClassProduto.php';
+require '../../model/Conexao.php';
+require '../../model/Classes/ClassProduto.php';
 require '../../model/DAO/ClassProdutoDAO.php';
 
-$ClassEstDAO = new ClassEstDAO();
-$pr = $ClassEstDAO->listarProduto();
+$ClassEstDAO = new ClassProdutoDAO();
+$pr = $ClassProdutoDAO->listarProduto();
 
 ?>
 

@@ -1,14 +1,14 @@
 <?php
-require_once 'Conexao.php';
+require_once '../Conexao.php';
 
-class ClassEstDAO
+class ClassProdutoDAO
 {
 
-    public function adicionarProduto(ClassEstoque $produto)
+    public function adicionarProduto(ClassProduto $produto)
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO estoque (idproduto, imagem, nome, quantidade, preco) values (?,?,?,?,?)";
+            $sql = "INSERT INTO produto (idproduto, imagem, nome, quantidade, preco) values (?,?,?,?,?)";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindValue(1, $produto->getIdproduto());
@@ -28,7 +28,7 @@ class ClassEstDAO
         try {
 
             $pdo = Conexao::getInstance();
-            $sql = "SELECT * FROM estoque";
+            $sql = "SELECT * FROM produto";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
             $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -40,9 +40,9 @@ class ClassEstDAO
     public function buscarProduto($idproduto)
     {
         try {
-            $produto = new ClassEstoque();
+            $produto = new ClassProduto();
             $pdo = Conexao::getInstance();
-            $sql = "SELECT idproduto, imagem, nome, quantidade, preco FROM estoque WHERE idproduto = :idproduto LIMIT 1";
+            $sql = "SELECT idproduto, imagem, nome, quantidade, preco FROM produto WHERE idproduto = :idproduto LIMIT 1";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':idproduto', $idproduto);
 
@@ -61,11 +61,11 @@ class ClassEstDAO
         }
     }
 
-    public function alterarProduto(ClassEstoque $produto)
+    public function alterarProduto(ClassProduto $produto)
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "UPDATE estoque SET imagem=?, nome=?, quantidade=?, preco=? where idproduto=?";
+            $sql = "UPDATE produto SET imagem=?, nome=?, quantidade=?, preco=? where idproduto=?";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(1, $produto->getImagem());
             $stmt->bindValue(2, $produto->getNome());
@@ -83,7 +83,7 @@ class ClassEstDAO
     {
         try {
             $pdo = Conexao::getInstance();
-            $sql = "DELETE FROM estoque WHERE idproduto = :idproduto";
+            $sql = "DELETE FROM produto WHERE idproduto = :idproduto";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':idproduto', $idproduto);
             $stmt->execute();
