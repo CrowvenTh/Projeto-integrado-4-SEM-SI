@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['id_usuario'])){
+if (!isset($_SESSION['id_usuario'])) {
     header('Location: Login.php');
 }
 ?>
@@ -11,13 +11,13 @@ if(!isset($_SESSION['id_usuario'])){
 
 <head>
     <meta charset="UTF-8">
-   
+
     <title>Perfil</title>
     <link rel="stylesheet" href="">
 </head>
 
 <body>
-<header>
+    <header>
         <nav>
             <ul>
                 <li><a href="../../index.php">Home</a></li>
@@ -35,42 +35,44 @@ if(!isset($_SESSION['id_usuario'])){
                 <h1>Perfil de cliente</h1>
                 <br><br>
                 <h4 class="dados">Seus Dados:</h5>
-                <br>
-                <?php
-            echo "<p>Seu ID: " . $_SESSION['id_usuario'];"</p>";
-            echo "<p>Seu nome: " . $_SESSION['nome'];"</p>";
-            echo "<p>Seu endereço: " . $_SESSION['endereco'];"</p>";
-            echo "<p>Seu e-mail: " . $_SESSION['email'];"</p>";
-            echo "<p>Seu telefone: " . $_SESSION['telefone'];"</p>";
+                    <br>
+                    <?php
+                    echo "<p>Seu ID: " . $_SESSION['id_usuario'];
+                    "</p>";
+                    echo "<p>Seu nome: " . $_SESSION['nome'];
+                    "</p>";
+                    echo "<p>Seu endereço: " . $_SESSION['endereco'];
+                    "</p>";
+                    echo "<p>Seu e-mail: " . $_SESSION['email'];
+                    "</p>";
+                    echo "<p>Seu telefone: " . $_SESSION['telefone'];
+                    "</p>";
 
-                ?>
+                    ?>
 
-                <br><br>
-                <h4 class="opcoes">Opções</h4>
-                <br>
-                <a href="AlterarCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Alterar Conta</a>
-                <br>
-                <a href="ExcluirCliente.php">Excluir conta</a>
-                <br>
-                <a href="CadCliente.php">Cadastrar nova conta</a>
+                    <br><br>
+                    <h4 class="opcoes">Opções</h4>
+                    <br>
+                    <a href="AlterarCliente.php?idex=<?php echo $_SESSION['id_usuario']; ?>">Alterar Conta</a>
+                    <br>
+                    <a href="ExcluirCliente.php">Excluir conta</a>
+                    <br>
+                    <a href="CadCliente.php">Cadastrar nova conta</a>
 
             </div>
-        </section>    
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <ul class="autores">
                 <h3>Autores</h3>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/akirar0n">Yago</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Yago-LDT">Roney</a></li>
-                <li> <img class="autoresImg" src="design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/Bryanjvo">Bryan</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
             </ul>
             <ul>
                 <h3>Contato</h3>
-                <li>(61) 91234-5678</li>
-                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/telefone.png"> (61) 91234-5678</li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/email.png"> <a style="color: white;" href="mailto:#"> email </a></li>
             </ul>
             <ul>
                 <h3>Endereço</h3>
@@ -80,9 +82,9 @@ if(!isset($_SESSION['id_usuario'])){
             </ul>
             <ul>
                 <h3>Redes Sociais</h3>
-                <li>Instagram</li>
-                <li>WhatsApp</li>
-                <li><a href="https://github.com/CrowvenTh/Delidalu-projetos/tree/main">Github</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/ig icon.png"> <a href="#">Instagram</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/whatsapp.png"> <a href="#">WhatsApp</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/link icon.png"> <a href="  ">Github</a></li>
             </ul>
         </div>
     </footer>
