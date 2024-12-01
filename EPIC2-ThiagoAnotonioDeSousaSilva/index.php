@@ -20,7 +20,7 @@
         </ul>
     </nav>
 
-    <main>
+    <main> 
         <form>
             <h2>Seja bem vindo a Corvus.tech !</h2>
 

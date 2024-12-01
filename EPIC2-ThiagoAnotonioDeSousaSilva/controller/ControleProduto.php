@@ -12,7 +12,7 @@ $preco = @$_POST['preco'];
 
 $acao = $_GET['ACAO'];
 // $idproduto = $_GET['idproduto'];
-
+ 
 $produto = new ClassProduto();
 
 $produto->setIdproduto($idproduto);
