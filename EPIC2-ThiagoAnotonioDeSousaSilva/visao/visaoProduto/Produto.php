@@ -57,6 +57,7 @@ $pr = $ClassProdutoDAO->listarProduto();
                     echo "</div>";
                 }
                 ?>
+
         </div>
         </section>
     </main>
