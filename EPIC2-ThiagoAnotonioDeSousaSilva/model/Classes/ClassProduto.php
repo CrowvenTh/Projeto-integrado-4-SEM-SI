@@ -5,6 +5,7 @@ class ClassProduto
     private $idproduto;
     private $imagem;
     private $nome;
+    private $descricao;
     private $quantidade;
     private $preco;
 
@@ -22,6 +23,9 @@ class ClassProduto
     public function getNome()
     {
         return $this->nome;
+    }
+    public function getDescricao(){
+        return $this->descricao;
     }
 
     public function getQuantidade()
@@ -49,6 +53,9 @@ class ClassProduto
     public function setNome($nome)
     {
         $this->nome = $nome;
+    }
+    public function setDescricao($descricao){
+        $this->descricao = $descricao;
     }
 
     public function setQuantidade($quantidade)

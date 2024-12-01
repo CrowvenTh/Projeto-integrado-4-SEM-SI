@@ -1,30 +1,32 @@
 <?php
 
-require_once '../model/ClassProduto.php';
+require_once '../model/Classes/ClassProduto.php';
 require_once '../model/DAO/ClassProdutoDAO.php';
 
 $idproduto = @$_POST['idproduto'];
 $imagem = @$_POST['imagem'];
 $nome = @$_POST['nome'];
+$descricao = @$_POST['descricao'];
 $quantidade = @$_POST['quantidade'];
 $preco = @$_POST['preco'];
 
 $acao = $_GET['ACAO'];
 // $idproduto = $_GET['idproduto'];
 
-$produto = new ClassEstoque();
+$produto = new ClassProduto();
 
 $produto->setIdproduto($idproduto);
 $produto->setImagem($imagem);
 $produto->setNome($nome);
+$produto->setDescricao($descricao);
 $produto->setQuantidade($quantidade);
 $produto->setPreco($preco);
 
-$ClassEstDAO = new ClassEstDAO();
+$ClassProdutoDAO = new ClassProdutoDAO();
 
 switch ($acao) {
     case "adicionarProduto":
-        $produto = $ClassEstDAO->adicionarProduto($produto);
+        $produto = $ClassProdutoDAO->adicionarProduto($produto);
 
         if ($produto >= 1) {
             header('Location:../visao/visaoProduto/CadProduto.php?&MSG= Produto adicionado com sucesso ao estoque!');
@@ -35,7 +37,7 @@ switch ($acao) {
         break;
 
     case 'alterarProduto':
-        $produto = $ClassEstDAO->alterarProduto($produto);
+        $produto = $ClassProdutoDAO->alterarProduto($produto);
 
         if ($produto == 1) { //varivael == 1 - referencia do professor 
             header('Location:../visao/visaoProduto/Produto.php?&MSG= Produto alterado com sucesso!');
@@ -47,8 +49,8 @@ switch ($acao) {
     case "excluirProduto":
         if(isset($_GET['idproduto'])){
             $idproduto = $_GET['idproduto'];
-            $ClassEstDAO = new ClassEstDAO();
-            $pr = $ClassEstDAO->excluirproduto($idproduto);
+            $ClassProdutoDAO = new ClassProdutoDAO();
+            $pr = $ClassProdutoDAO->excluirProduto($idproduto);
             if($pr == TRUE){
                 header('Location:../visao/visaoProduto/Produto.php?&MSG= Produto excluído com sucesso!');
             } else {

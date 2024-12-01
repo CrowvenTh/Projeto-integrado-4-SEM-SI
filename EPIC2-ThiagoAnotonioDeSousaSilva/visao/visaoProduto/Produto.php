@@ -2,11 +2,11 @@
 session_start();
 // include("CadProduto.php");
 
-require '../../model/Conexao.php';
+require '../../model/DAO/Conexao.php';
 require '../../model/Classes/ClassProduto.php';
 require '../../model/DAO/ClassProdutoDAO.php';
 
-$ClassEstDAO = new ClassProdutoDAO();
+$ClassProdutoDAO = new ClassProdutoDAO();
 $pr = $ClassProdutoDAO->listarProduto();
 
 ?>
@@ -18,8 +18,8 @@ $pr = $ClassProdutoDAO->listarProduto();
     <meta charset="UTF-8">
     <meta name="visaoport" content="width=device-width, initial-scale=1.0">
     <title>Corvus_Tech</title>
-    <link rel="stylesheet" href="">
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="icon" type="image/x-icon" href="../design//logotipo/Corvus.tech_logo.png">
 </head>
 
 <body>
@@ -39,20 +39,21 @@ $pr = $ClassProdutoDAO->listarProduto();
         <div>
             <h1>Catálogo de Produtos</h1>
             <section class="grid grid-template-columns-4">
-                <div class="item">
+                <!-- <div class="item">
                     <img class="imgProduto" src="">
                     <button class="adicionarButton"><a href="../visaoProduto/CadProduto.php">Adicionar</a></button>
 
-                </div>
+                </div> -->
                 <?php
                 foreach ($pr as $pr) {
                     echo "<div class='item'>";
                     echo "<img class='imgProduto' src=" . $pr['imagem'] . " alt='img'>";
                     echo "<h3>" . $pr['nome'] . "</h3>";
+                    echo "<p>" . $pr['descricao'] . "</p>";
                     echo "<p> R$" . $pr['preco'] . "</p>";
                     // echo "<button class='adicionarButton'><a href='../visaoProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
-                    echo "<button class='alterarButton'><a href='../visaoProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
-                    echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
+                    // echo "<button class='alterarButton'><a href='../visaoProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
+                    // echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
                     echo "</div>";
                 }
                 ?>

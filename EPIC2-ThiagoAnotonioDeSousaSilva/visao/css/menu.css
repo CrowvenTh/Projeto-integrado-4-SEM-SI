@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #030b2a;
+    color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #030b2a;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e8e8e8;
+    color: #030b2a;
+}
+
+a {
+    color: #030b2a;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    text-align: justify;
+    width: 850px;
+    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+.texto{
+    background-color: #e8e8e8;
+    color: #030b2a;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px #030b2a;
+}
+
+/* rodape */
+
+footer {
+    background-color: #030b2a;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer h3 {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.autores,
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.autoresImg {
+    width: 15px;
+    height: 15px;
+}
+
+/* Produtos */
+
+/* O repeat vai repetir o número de colunas */
+.grid-template-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsivo: cada coluna terá no mínimo 250px e no máximo 1fr */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    max-width: 1200px;
+    /* Largura máxima do container da grid */
+    margin: 0 auto;
+    /* Centralizar a grid */
+    padding: 20px;
+    /* Espaçamento interno */
+    background-color: #f0f0f0;
+    border-radius: 24px;
+}
+
+.item {
+    margin: 1px;
+    background: #171b2e;
+    text-align: center;
+    font-size: 1.2em;
+    /* Font-size ajustado para que o texto não seja muito grande */
+    border-radius: 24px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px #030b2a;
+    /* Adicionando sombra para destaque */
+}
+
+.imgProduto {
+    width: 250px;
+    height: 250px;
+    /* Ajusta a altura da imagem proporcionalmente à largura */
+    border-radius: 240px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #f0f0f0;
+}
+
+h1 ,p {
+    text-align: center;
+    text-shadow: 2px 2px 5px #030b2a;
+    font-size: 1.5rem;
+}
+/* 
+p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin: 5px 0;
+} */
+
+.adicionarButton,
+.alterarButton,
+.excluirButton {
+    background-color: #e8e8e8;
+    color: #030b2a;
+    border-radius: 4.5px;
+    border: none;
+    margin: 4px;
+    padding: 6.5px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.adicionarButton:hover {
+    background-color: #e8e8e8;
+    color: #030b2a;
+    border-radius: 4.5px;
+    border-color: none;
+    padding: 6.5px;
+}
+
+.alterarButton:hover {
+    background-color: #d4c2ca;
+    color: #030b2a;
+    border-radius: 4.5px;
+    border-color: none;
+    padding: 6.5px;
+}
+
+.excluirButton:hover {
+    background-color: #4e0707;
+    color: #030b2a;
+    border-radius: 4.5px;
+    border-color: none;
+    padding: 6.5px;
+}
