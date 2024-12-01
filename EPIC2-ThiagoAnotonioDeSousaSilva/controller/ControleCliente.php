@@ -1,5 +1,5 @@
 <?php
-require_once '../model/ClassCliente.php';
+require_once '../model/Classes/ClassCliente.php';
 require_once '../model/DAO/ClassClienteDAO.php';
 
 //Cliente//
@@ -29,7 +29,6 @@ $processar->setSenha($senha);
 $processar->setTelefone($telefone);
 
 $ClassClienteDAO = new ClassClienteDAO();
-
 
 switch ($acao) {
 

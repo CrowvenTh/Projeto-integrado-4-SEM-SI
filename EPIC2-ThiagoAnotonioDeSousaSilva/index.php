@@ -15,8 +15,8 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="visao/visaoProduto/Produto.php">Produtos</a></li>
-            <li><a href="visao/FormLogUsuario.php">Login</a></li>
-            <li><a href="visao/FormCadUsuario.php">Cadastre-se</a></li>
+            <li><a href="./visao//visaoCliente/Login.php">Login</a></li>
+            <li><a href="./visao//visaoCliente/CadCliente.php">Cadastre-se</a></li>
         </ul>
     </nav>
 
