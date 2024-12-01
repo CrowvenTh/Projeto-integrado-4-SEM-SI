@@ -157,7 +157,7 @@ a {
 
 .item {
     margin: 0.1px;
-    background: #171b2e;
+    background: #030b2a;
     text-align: center;
     /* font-size: 1.2em; */
     /* Font-size ajustado para que o texto não seja muito grande */
@@ -196,7 +196,7 @@ p {
     color: #f0f0f0;
     margin: 5px 0;
 } */
-
+/* 
 .adicionarButton,
 .alterarButton,
 .excluirButton {
@@ -234,4 +234,39 @@ p {
     border-radius: 4.5px;
     border-color: none;
     padding: 6.5px;
+} */
+.adicionarCarrinho {
+    background-color: #171b2e; /* Cor de fundo escura */
+    color: #f4f4f4; /* Cor do texto clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    margin: 10px; /* Espaçamento entre outros elementos */
+    padding: 12px 24px; /* Padding adequado para aumentar a área de clique */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
+    width: auto; /* Tamanho do botão ajustável */
+    display: inline-block; /* Exibição em linha, mas pode ter margens e padding */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Cursor de clique */
+    transition: all 0.3s ease; /* Animação suave para transições */
+}
+
+/* Estado de hover (quando o mouse está sobre o botão) */
+.adicionarCarrinho:hover {
+    background-color: #e8e8e8; /* Cor de fundo clara quando o botão é pressionado */
+    color: #030b2a; /* Cor do texto escura */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho para efeito visual */
+}
+
+/* Estado de foco (quando o botão é clicado ou está focado) */
+.adicionarCarrinho:focus {
+    outline: none; /* Remove a borda padrão do foco */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor para indicar foco */
+}
+
+/* Quando o botão é pressionado (clicado) */
+.adicionarCarrinho:active {
+    background-color: #d4d4d4; /* Cor um pouco mais escura */
+    transform: scale(0.98); /* Efeito de pressionar (diminuir um pouco) */
 }

@@ -42,7 +42,7 @@ $pr = $ClassProdutoDAO->listarProduto();
                 <!-- <div class="item">
                     <img class="imgProduto" src="">
                     <button class="adicionarButton"><a href="../visaoProduto/CadProduto.php">Adicionar</a></button>
-
+                    
                 </div> -->
                 <?php
                 foreach ($pr as $pr) {
@@ -54,6 +54,8 @@ $pr = $ClassProdutoDAO->listarProduto();
                     // echo "<button class='adicionarButton'><a href='../visaoProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
                     // echo "<button class='alterarButton'><a href='../visaoProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
                     // echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
+
+                    echo "<button class='adicionarCarrinho'><a href=''>Adicionar ao Carrinho</a></button>";
                     echo "</div>";
                 }
                 ?>
