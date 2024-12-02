@@ -14,9 +14,10 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="visao/visaoProduto/Produto.php">Produtos</a></li>
-            <li><a href="./visao//visaoCliente/Login.php">Login</a></li>
-            <li><a href="./visao//visaoCliente/CadCliente.php">Cadastre-se</a></li>
+            <li><a href="./visao/visaoProduto/Produto.php">Produtos</a></li>
+            <li><a href="./visao/visaoCliente/Login.php">Login</a></li>
+            <li><a href="./visao/visaoCliente/CadCliente.php">Cadastre-se</a></li>
+            <li><a href="./visao/visaoCliente/Perfil.php">Meu perfil</a></li>
         </ul>
     </nav>
 
@@ -31,29 +32,33 @@
         </form>
     </main>
 
+   
     <footer>
         <div class="footer-content">
+            <ul class="autores">
+                <h3>Autores</h3>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/github-mark.png"> <a href="https://github.com/CrowvenTh">Thiago</a></li>
+            </ul>
             <ul>
                 <h3>Contato</h3>
-                <li>(61) 91234-5678</li>
-                <li><a style="color: white;" href="mailto:#">corvustech@gmail.com</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/telefone.png"> (61) 91234-5678</li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/email.png"> <a style="color: white;" href="mailto:#"> email </a></li>
             </ul>
             <ul>
                 <h3>Endereço</h3>
                 <li>CEP: 123.456-789</li>
-                <li>Rua do Corvo</li>
-                <li>Prédio Corvinal, 217 - Brasília/DF</li>
+                <li>QS alguma coisa</li>
+                <li>Rua tal, Samambaia Sul - Brasília/DF</li>
             </ul>
             <ul>
                 <h3>Redes Sociais</h3>
-                <li> <a href="#">WhatsApp</a></li>
-                <li> <a href="#">Insagram</a></li>
-                <li> <a href="https://github.com/CrowvenTh">Github</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/ig icon.png"> <a href="#">Instagram</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/whatsapp.png"> <a href="#">WhatsApp</a></li>
+                <li> <img class="autoresImg" src="../design_&_layout/logotipo/link icon.png"> <a href="  ">Github</a></li>
             </ul>
         </div>
     </footer>
 
 </body>
-
 
 </html>
