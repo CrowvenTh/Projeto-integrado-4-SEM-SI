@@ -55,6 +55,7 @@ insert into produto (imagem, nome, descricao, tipo, quantidade, preco) values
 select id, idcliente, idproduto, quantidadepedido, totalpedido, date_format(datapedido, '%d/%m/%y') as datapedido from clientepedido;
 
 -- SELECTS --
+
 select * from cliente;
 
 select * from produto;
@@ -62,8 +63,18 @@ select * from produto;
 select * from clientepedido;
 desc clientepedido;
 
-insert into clientepedido (idcliente, idproduto, quantidadepedido, totalpedido, datapedido) values
-();
+insert into clientepedido (idcliente, idproduto, quantidadepedido, totalpedido, datapedido) values 
+(1, 1, 1, (select preco from produto where produto.idproduto = 1), current_date());
+/*
+INSERT INTO clientepedido (idcliente, idproduto, quantidadepedido, totalpedido, datapedido)
+VALUES (
+    2, -- id do cliente
+    1, -- id do produto
+    2, -- quantidade do pedido
+    (SELECT preco FROM produto WHERE idproduto = 1) * 2 ,
+    '2024-12-01' 
+);
+*/
 
 select cp.id as ID, c.nome as Cliente, c.endereco as Endereço, p.nome as Produto, cp.quantidadepedido as Quantidade
 , cp.totalpedido as Total, cp.datapedido as Data_Pedido FROM clientepedido as cp

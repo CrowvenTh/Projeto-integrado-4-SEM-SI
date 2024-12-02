@@ -121,14 +121,14 @@ class ClassClienteDAO
         }
     }
 
-    public function buscarCliente($idCliente)
+    public function buscarCliente($id)
     {
         try {
             $cliente = new ClassCliente();
             $pdo = Conexao::getInstance();
             $sql = "SELECT id, nome, cpf, endereco, email, telefone, senha FROM cliente WHERE id =:id LIMIT 1";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(':id', $idCliente);
+            $stmt->bindValue(':id', $id);
 
             $stmt->execute();
             $clienteAssoc = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -167,10 +167,10 @@ class ClassClienteDAO
         try {
 
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO clientepedido (idcliente, idproduto, quantidadepedido, datapedido) values (?,?,?,curdate())";
+            $sql = "INSERT INTO clientepedido (id, idproduto, quantidadepedido, datapedido) values (?,?,?,curdate())";
             $stmt = $pdo->prepare($sql);
 
-            $stmt->bindValue(1, $pedido->getIdcliente());
+            $stmt->bindValue(1, $pedido->getId());
             $stmt->bindValue(2, $pedido->getIdproduto());
             $stmt->bindValue(3, $pedido->getQuantidadepedido());
             $stmt->execute();
@@ -185,9 +185,16 @@ class ClassClienteDAO
         try {
 
             $pdo = Conexao::getInstance();
-            $sql = "SELECT cp.id AS ID, c.nome AS Cliente, c.endereco AS Endereço, p.nome AS Produto, cp.quantidadepedido AS Quantidade, cp.totalpedido AS Total, cp.datapedido AS Data_Pedido FROM clientepedido AS cp
-            INNER JOIN cliente AS c ON cp.idcliente = c.id
-            INNER JOIN produto AS e ON cp.idproduto = p.idproduto";
+            $sql = "SELECT cp.id AS ID, 
+                           c.nome AS Cliente, 
+                           c.endereco AS Endereço, 
+                           p.nome AS Produto, 
+                           cp.quantidadepedido AS Quantidade, 
+                           cp.totalpedido AS Total, 
+                           cp.datapedido AS Data_Pedido 
+                    FROM clientepedido AS cp
+                        INNER JOIN cliente AS c ON cp.id = c.id
+                        INNER JOIN produto AS p ON cp.idproduto = p.idproduto";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
             $pedidos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -213,11 +220,11 @@ class ClassClienteDAO
             }
 
             $pdo = Conexao::getInstance();
-            $sql = "UPDATE clientepedido SET idproduto=?, idcliente=?, quantidadepedido=? where id=?";
+            $sql = "UPDATE clientepedido SET idproduto=?, id=?, quantidadepedido=? where id=?";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindValue(1, $pedido->getIdproduto());
-            $stmt->bindValue(2, $pedido->getIdcliente());
+            $stmt->bindValue(2, $pedido->getId());
             $stmt->bindValue(3, $pedido->getQuantidadepedido());
             $stmt->bindValue(4, $pedido->getNovoid());
 
