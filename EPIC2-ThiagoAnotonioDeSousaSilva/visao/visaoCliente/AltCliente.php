@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar informações</title>
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/form.css">
     <link rel="icon" type="image/x-icon" href="../design/logotipo/Corvus.tech_logo.png">
 </head>
 <nav>
@@ -31,7 +31,7 @@ if (!isset($_SESSION['id_usuario'])) {
         <section>
             <div class="form">
                 <?php
-                require '../../model/ClassCliente.php';
+                require '../../model/Classes/ClassCliente.php';
                 require '../../model/DAO/ClassClienteDAO.php';
                 $id = @$_GET['idex'];
                 $novoCliente = new ClassCliente();
@@ -39,11 +39,10 @@ if (!isset($_SESSION['id_usuario'])) {
                 $novoCliente = $clienteDAO->buscarCliente($id);
                 ?>
                 <h4>Formulário de Alteração de Cliente</h4>
-                <form method="post" action="../../controler/ControleCliente.php?ACAO=alterarcliente">
+                <form method="post" action="../../controller/ControleCliente.php?ACAO=alterarcliente">
 
                     <p>
-                        Digite o seu ID atual:
-                        <input type="text" name="novoid" maxlength="40" placeholder="Digite o seu ID" value="<?php echo $novoCliente->getId(); ?>" required />
+                        <input type="hidden" name="novoid" maxlength="40" placeholder="Digite o seu ID" value="<?php echo $novoCliente->getId(); ?>">
                     </p>
 
                     <p>

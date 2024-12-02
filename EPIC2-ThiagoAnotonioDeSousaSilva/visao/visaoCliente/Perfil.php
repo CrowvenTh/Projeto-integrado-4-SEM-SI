@@ -35,15 +35,16 @@ if (!isset($_SESSION['id_usuario'])) {
                 <?php
                 echo "<p> ID: " . $_SESSION['id_usuario'];
                 "</p>";
-                echo "<p> nome: " . $_SESSION['nome'];
+                echo "<p> Nome: " . $_SESSION['nome'];
                 "</p>";
-                echo "<p> endereço: " . $_SESSION['endereco'];
+                // echo "<p> Cpf: " . $_SESSION['cpf'];
+                // "</p>";
+                echo "<p> Endereço: " . $_SESSION['endereco'];
                 "</p>";
-                echo "<p> e-mail: " . $_SESSION['email'];
+                echo "<p> Email: " . $_SESSION['email'];
                 "</p>";
-                echo "<p> telefone: " . $_SESSION['telefone'];
+                echo "<p> Telefone: " . $_SESSION['telefone'];
                 "</p>";
-
                 ?>
 
                 <br><br>
