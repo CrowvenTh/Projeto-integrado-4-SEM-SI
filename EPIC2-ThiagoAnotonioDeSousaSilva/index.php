@@ -18,6 +18,7 @@
             <li><a href="./visao/visaoCliente/Login.php">Login</a></li>
             <li><a href="./visao/visaoCliente/CadCliente.php">Cadastre-se</a></li>
             <li><a href="./visao/visaoCliente/Perfil.php">Meu perfil</a></li>
+            <li><a href="./visao/visaoPedido/CadPedido.php">Cadastrar pedido</a></li>
         </ul>
     </nav>
 

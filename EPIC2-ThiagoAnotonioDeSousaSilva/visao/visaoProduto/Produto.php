@@ -55,7 +55,7 @@ $pr = $ClassProdutoDAO->listarProduto();
                     // echo "<button class='alterarButton'><a href='../visaoProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
                     // echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
 
-                    echo "<button class='adicionarCarrinho'><a href=''>Adicionar ao Carrinho</a></button>";
+                    echo "<button class='adicionarCarrinho'><a href='../../controller/ControleCliente.php?ACAO=cadastrarpedido'>Adicionar ao Carrinho</a></button>";
                     echo "</div>";
                 }
                 ?>

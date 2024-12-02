@@ -13,6 +13,13 @@ $email = @$_POST['email'];
 $senha = @$_POST['senha'];
 $telefone = @$_POST['telefone'];
 
+//pedido
+$idcliente = @$_POST['idcliente'];
+$idproduto = @$_POST['idproduto'];
+$quantidadepedido = @$_POST['quantidadepedido'];
+$totalpedido = @$_POST['totalpedido'];
+$datapedido = @$_POST['datapedido'];
+
 $acao = $_GET['ACAO'];
 
 $processar = new ClassCliente();
@@ -28,6 +35,13 @@ $processar->setEmail($email);
 $processar->setSenha($senha);
 $processar->setTelefone($telefone);
 
+//pedido
+$processar->setIdcliente($idcliente);
+$processar->setIdproduto($idproduto);
+$processar->setQuantidadepedido($quantidadepedido);
+$processar->setTotalpedido($totalpedido);
+$processar->setDatapedido($datapedido);
+
 $ClassClienteDAO = new ClassClienteDAO();
 
 switch ($acao) {
@@ -41,7 +55,7 @@ switch ($acao) {
         }
 
         break;
-        //
+        
     case "cadastrarCliente":
         $cliente = $ClassClienteDAO->cadastrarcliente($processar);
 
@@ -52,7 +66,7 @@ switch ($acao) {
         }
 
         break;
-        //
+        
     case "excluircliente":
         $excluir = $ClassClienteDAO->excluircliente($processar);
 
@@ -62,7 +76,7 @@ switch ($acao) {
             header('Location:../visao/visaoCliente/ExcluirCliente.php?&MSG= Não foi possivel realizar a exclusão!');
         }
         break;
-        //
+        
     case "alterarcliente":
         $alterar = $ClassClienteDAO->alterarcliente($processar);
         if ($alterar >= 1) {
@@ -70,6 +84,38 @@ switch ($acao) {
         } else {
             header('Location:../visao/AlterarCliente.php?&MSG= Não foi possivel realizar a alteração!');
         }
+        break;
 
+        //pedido
+    case "cadastrarpedido":
+        $pedido = $ClassClienteDAO->cadastrarpedido($processar);
+
+        if ($pedido >= 1) {
+            header('Location:../visao/visaoPedido/CadPedido.php?&MSG= Cadastro realizado com sucesso!');
+        } else {
+            header('Location:../visao/visaoPedido/CadPedido.php?&MSG= Não foi possivel realizar o cadastro!');
+        }
+        break;
+
+    case "alterarpedido":
+
+        $alterar = $ClassClienteDAO->alterarpedido($processar);
+
+        if ($alterar >= 1) {
+            header('Location:../visao/visaoPedido/AltPedido.php?&MSG= Alteração realizada com sucesso!');
+        } else {
+            header('Location:../visao/visaoPedido/AltPedido.php?&MSG= Não foi possivel realizar a alteração!');
+        }
+        break;
+
+    case "excluirpedido":
+
+        $excluir = $ClassClienteDAO->excluirpedido($processar);
+
+        if ($excluir >= 1) {
+            header('Location:../visao/visaoPedido/ExcluirPedido.php?&MSG= Exclusão realizada com sucesso!');
+        } else {
+            header('Location:../visao/visaoPedido/ExcluirPedido.php?&MSG= Não foi possivel realizar a exclusão!');
+        }
         break;
 }

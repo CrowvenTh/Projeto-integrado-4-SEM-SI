@@ -12,6 +12,13 @@ class ClassCliente
     private $telefone;
     private $senha;
 
+    //pedido
+    private $idcliente;
+    private $idproduto;
+    private $quantidadepedido;
+    private $totalpedido;
+    private $datapedido;
+
     function getId()
     {
         return $this->id;
@@ -100,6 +107,42 @@ class ClassCliente
     function setSenha($senha)
     {
         $this->senha = $senha;
+    }
+
+    //pedido
+    function getIdcliente(){
+        return $this->idcliente;
+    }
+    function setIdcliente($idcliente){
+        $this->idcliente = $idcliente;
+    }
+
+    function getidproduto(){
+        return $this->idproduto;
+    }
+    function setidproduto($idproduto){
+        $this->idproduto = $idproduto;
+    }
+
+    function getQuantidadepedido(){
+        return $this->quantidadepedido;
+    }
+    function setQuantidadepedido($quantidadepedido){
+        $this->quantidadepedido = $quantidadepedido;
+    }
+
+    function getTotalpedido(){
+        return $this->totalpedido;
+    }
+    function setTotalpedido($totalpedido){
+        $this-> totalpedido = $totalpedido;
+    }
+
+    function getDatapedido(){
+        return $this->datapedido;
+    }
+    function setDatapedido($datapedido){
+        $this-> datapedido = $datapedido;
     }
 
 }

@@ -28,7 +28,7 @@ create table if not exists clientepedido (
     idcliente int not null, 
     idproduto int not null, 
     quantidadepedido int, 
-    totalpedido double, 
+    totalpedido decimal(10,2), 
     datapedido date,
         foreign key (idcliente) references cliente(id),
         foreign key (idproduto) references produto(idproduto)
@@ -60,6 +60,10 @@ select * from cliente;
 select * from produto;
 
 select * from clientepedido;
+desc clientepedido;
+
+insert into clientepedido (idcliente, idproduto, quantidadepedido, totalpedido, datapedido) values
+();
 
 select cp.id as ID, c.nome as Cliente, c.endereco as Endereço, p.nome as Produto, cp.quantidadepedido as Quantidade
 , cp.totalpedido as Total, cp.datapedido as Data_Pedido FROM clientepedido as cp
