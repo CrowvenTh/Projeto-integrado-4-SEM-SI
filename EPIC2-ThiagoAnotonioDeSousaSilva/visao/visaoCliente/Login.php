@@ -21,7 +21,10 @@ session_start();
 
 <body>
     <div class="form">
+        <img href="../design/logotipo/Corvus.tech_logo.png">
         <h4>Formulário de Login</h4>
+
+
         <form method="post" action="../../controller/ControleCliente.php?ACAO=verificarLogin">
             <p>
                 Email:

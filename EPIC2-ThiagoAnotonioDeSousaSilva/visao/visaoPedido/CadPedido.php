@@ -28,9 +28,11 @@
 
         <form method="post" action="../../controller/ControleCliente.php?ACAO=cadastrarpedido">
 
-
             <!-- <label for="imagem">Imagem:</label>
             <input type="url" id="imagem" name="imagem" maxlength="500" placeholder="Insira o link da imagem" /> -->
+
+            <!-- <label for="idcliente">id cliente:</label>
+            <input type="text" id="id" name="nome" maxlength="40" placeholder="Insira seu id " />
 
             <label for="produto">Produto:</label>
             <input type="text" id="nome" name="nome" maxlength="40" placeholder="Insira o nome do produto " />
@@ -39,7 +41,7 @@
             <input type="text" id="quantidade" name="quantidade" maxlength="40" placeholder="Insira a quantidade do produto" />
 
             <label for="preco">Preço:</label>
-            <input type="text" id="preco" name="preco" maxlength="40" placeholder="Insira o preço do produto" />
+            <input type="text" id="preco" name="preco" maxlength="40" placeholder="Insira o preço do produto" /> -->
 
             <button type="submit" value="Registrar">Cadastrar</button>
             <button type="reset" value="Limpar">Limpar</button>

@@ -39,11 +39,6 @@ $pr = $ClassProdutoDAO->listarProduto();
         <div>
             <h1>Catálogo de Produtos</h1>
             <section class="grid grid-template-columns-4">
-                <!-- <div class="item">
-                    <img class="imgProduto" src="">
-                    <button class="adicionarButton"><a href="../visaoProduto/CadProduto.php">Adicionar</a></button>
-                    
-                </div> -->
                 <?php
                 foreach ($pr as $pr) {
                     echo "<div class='item'>";
@@ -51,11 +46,8 @@ $pr = $ClassProdutoDAO->listarProduto();
                     echo "<h3>" . $pr['nome'] . "</h3>";
                     echo "<p>" . $pr['descricao'] . "</p>";
                     echo "<p> R$" . $pr['preco'] . "</p>";
-                    // echo "<button class='adicionarButton'><a href='../visaoProduto/CadProduto.php?id=" . $pr['id'] . "'>Adicionar</a></button>";
-                    // echo "<button class='alterarButton'><a href='../visaoProduto/AltProduto.php?idproduto=" . $pr['idproduto'] . "'>Alterar</a></button>";
-                    // echo "<button class='excluirButton  name='excluir' id='excluir' value='excluir'><a href='../../controler/ControleEstoque.php?ACAO=excluirProduto&idproduto=" . $pr['idproduto'] . "'onclick='return checkDelete()'>Excluir</a></button>";
-
-                    echo "<button class='adicionarCarrinho'><a href='../../controller/ControleCliente.php?ACAO=cadastrarpedido'>Adicionar ao Carrinho</a></button>";
+                    // echo "<button class='adicionarCarrinho'><a href='../../controller/ControleCliente.php?ACAO=listarpedido'>Adicionar ao Carrinho</a></button>";
+                    echo "<button class='adicionarCarrinho'><a href='../visaoPedido/ListarPedidos.php'>Adicionar ao Carrinho</a></button>";
                     echo "</div>";
                 }
                 ?>

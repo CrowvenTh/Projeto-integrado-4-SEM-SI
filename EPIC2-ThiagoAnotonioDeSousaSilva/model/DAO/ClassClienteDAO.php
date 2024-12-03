@@ -167,7 +167,9 @@ class ClassClienteDAO
         try {
 
             $pdo = Conexao::getInstance();
-            $sql = "INSERT INTO clientepedido (id, idproduto, quantidadepedido, datapedido) values (?,?,?,curdate())";
+            // $sql = "INSERT INTO clientepedido (id, idproduto, quantidadepedido, datapedido) values (?,?,?,curdate())";
+            $sql = "INSERT INTO clientepedido (idcliente, idproduto, quantidadepedido, totalpedido, datapedido) values 
+            (?, ?, ?, (select preco from produto where produto.idproduto = ?), current_date())";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindValue(1, $pedido->getId());
